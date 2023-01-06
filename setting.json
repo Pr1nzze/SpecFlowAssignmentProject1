@@ -1,0 +1,9 @@
+{
+  "Enviroment": {
+    "demoqaUrl": "https://demoqa.com"
+  },
+  "Credentials": {
+    "Username": "myusername",
+    "Password" : "mypassword"
+  }
+}
