@@ -35,6 +35,7 @@ namespace SpecFlowAssignmentProject1.StepDefinitions
         [When(@"I Click on text Box")]
         public void WhenIClickOnTextBox()
         {
+            Thread.Sleep(3000);
         }
 
         [When(@"I Enter FirstName")]
