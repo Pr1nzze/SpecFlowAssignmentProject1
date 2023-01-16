@@ -4,7 +4,7 @@ Background:
      Given I am on demoqa site
 
 
-@Demoqa 
+@Demoqa @RegressionTest
 Scenario: [Demoqa registration test]
     When I Click on Elements
     And I Click on text Box
