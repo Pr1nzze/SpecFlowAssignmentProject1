@@ -20,9 +20,9 @@ namespace SpecFlowAssignmentProject1.Pages
         public void BeforeScenarioWithTag()
         {
             new DriverManager().SetUpDriver(new ChromeConfig()); //handles initialization of browsers
-            var options = new ChromeOptions();
+            var options = new ChromeOptions(); ////handles additional capability options
             options.AddArguments("--start-maximized", "--incognito");
-            driverHelper.driver = new ChromeDriver(options);
+            driverHelper.driver = new ChromeDriver(options); //initialization of browser object
         }
 
 
