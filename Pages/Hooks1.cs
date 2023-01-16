@@ -3,7 +3,7 @@ using SpecFlowAssignmentProject1.Drivers;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 
-namespace SpecFlowAssignmentProject1.Hooks
+namespace SpecFlowAssignmentProject1.Pages
 {
     [Binding]
     public sealed class Hooks1
@@ -22,18 +22,18 @@ namespace SpecFlowAssignmentProject1.Hooks
             new DriverManager().SetUpDriver(new ChromeConfig());
             var options = new ChromeOptions();
             options.AddArguments("--start-maximized", "--incognito");
-            driverHelper.driver = new ChromeDriver(options);          
+            driverHelper.driver = new ChromeDriver(options);
         }
 
 
         [AfterScenario]
         public void AfterScenario()
         {
-            if (driverHelper.driver != null) 
+            if (driverHelper.driver != null)
             {
-              driverHelper.driver.Quit();
+                driverHelper.driver.Quit();
             }
-            driverHelper.driver= null;
+            driverHelper.driver = null;
         }
     }
 }

@@ -3,6 +3,7 @@ using SpecFlowAssignmentProject1.Configurations;
 using SpecFlowAssignmentProject1.Drivers;
 using SpecFlowAssignmentProject1.Extensions;
 using SpecFlowAssignmentProject1.Pages;
+using System.Collections.ObjectModel;
 
 namespace SpecFlowAssignmentProject1.StepDefinitions
 {
@@ -35,13 +36,14 @@ namespace SpecFlowAssignmentProject1.StepDefinitions
         [When(@"I Click on text Box")]
         public void WhenIClickOnTextBox()
         {
-            Thread.Sleep(3000);
+           Thread.Sleep(2000);
+
         }
 
         [When(@"I Enter FirstName")]
         public void WhenIEnterFirstName()
         {
-            
+            driverHelper.driver.clickViaJs(driverHelper.driver.FindElements(By.XPath("//li[@id='item-0']")));
         }
 
         [When(@"I Enter Email")]
